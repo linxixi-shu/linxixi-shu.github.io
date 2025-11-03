@@ -13,6 +13,16 @@ baseurl                 : ""
 url                     : "https://linxixi-shu.github.io/limengping.github.io"
 google_scholar_stats_use_cdn : false
 
+# Site Navigation
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      navigation: main
+
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
 
