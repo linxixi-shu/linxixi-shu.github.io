@@ -12,7 +12,8 @@
             {% if first_char == "#" %}
               <li class="masthead__menu-item"><a href="{{ link.url }}">{{ link.title }}</a></li>
             {% else %}
-              <li class="masthead__menu-item"><a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+              {%- assign full = site.url | append: site.baseurl -%}
+              <li class="masthead__menu-item"><a href="{{ full }}{{ link.url }}">{{ link.title }}</a></li>
             {% endif %}
           {% endfor %}
         </ul>
