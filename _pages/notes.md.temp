@@ -1,0 +1,32 @@
+---
+permalink: /notes/
+title: "学习笔记"
+excerpt: "个人学习笔记索引"
+---
+
+# 学习笔记
+
+这是你的学习笔记汇总页面。把笔记放在仓库根目录下的 `_notes/` 文件夹里（每个笔记是一个带 front-matter 的 markdown 文件），Jekyll 会把它们当作集合项输出。
+
+## 当前笔记列表
+
+{% for note in site.notes %}
+- [{{ note.title }}]({{ site.baseurl }}{{ note.url }}) — {{ note.date | date: "%Y-%m-%d" }}
+{% endfor %}
+
+---
+
+如何添加新笔记：
+
+1. 在 `_notes/` 下创建一个新的 Markdown 文件，例如 `2025-11-05-my-note.md`。
+2. 在文件顶部添加 front matter：
+
+```yaml
+---
+title: "笔记标题"
+date: 2025-11-05
+tags: [tag1, tag2]
+---
+```
+
+3. 写下你的笔记内容并提交推送，访问 `/notes/` 页面即可看到新条目。
